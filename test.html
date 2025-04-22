@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="card-title">YAY! It's BOGO</h1>
+            <hr>
+            <div class="card-items-wrapper">
+                <div class="card-item">
+                    <div class="plan-price-wrapper">
+                        <div>
+                            <input type="radio" class="card-input">
+                            <div class="plan-name">
+                                <h6>1 Unit <span>10% Off</span></h6>
+                                <span>Standard Price </span>
+
+                            </div>
+                        </div>
+                        <div class="plan-price">
+                            <h6>$10.00 USD</h6>
+                            <span>$24.00 USD</span>
+                        </div>
+                    </div>
+                    <div class="expand hidden">
+                        <div class="item">
+                            <div></div>
+                            <div class="item-size">Size</div>
+                            <div>Color</div>
+                        </div>
+                        <div class="item">
+                            <div>#1</div>
+                            <div class="item-size">
+                                <select>
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                </select>
+                            </div>
+                            <select>
+                                <option>Black</option>
+                                <option>Blue</option>
+                                <option>Red</option>
+                            </select>
+                        </div>
+                        <div class="item">
+                            <div>#2</div>
+                            <div class="item-size">
+                                <select>
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                </select>
+                            </div>
+                            <select>
+                                <option>Black</option>
+                                <option>Blue</option>
+                                <option>Red</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item active">
+                    <div class="most-popular-tag">MOST POPULAR</div>
+                    <div class="plan-price-wrapper">
+                        <div>
+                            <input type="radio" class="card-input" checked>
+                            <div class="plan-name">
+                                <h6>2 Unit <span>10% Off</span></h6>
+                                <span>Standard Price </span>
+
+                            </div>
+                        </div>
+                        <div class="plan-price">
+                            <h6>$10.00 USD</h6>
+                            <span>$24.00 USD</span>
+                        </div>
+                    </div>
+                    <div class="expand">
+                        <div class="item">
+                            <div></div>
+                            <div class="item-size">Size</div>
+                            <div>Color</div>
+                        </div>
+                        <div class="item">
+                            <div>#1</div>
+                            <div class="item-size">
+                                <select>
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                </select>
+                            </div>
+                            <select>
+                                <option>Black</option>
+                                <option>Blue</option>
+                                <option>Red</option>
+                            </select>
+                        </div>
+                        <div class="item">
+                            <div>#2</div>
+                            <div class="item-size">
+                                <select>
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                </select>
+                            </div>
+                            <select>
+                                <option>Black</option>
+                                <option>Blue</option>
+                                <option>Red</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="plan-price-wrapper">
+                        <div>
+                            <input type="radio" class="card-input">
+                            <div class="plan-name">
+                                <h6>3 Unit <span>10% Off</span></h6>
+                                <span>Standard Price </span>
+
+                            </div>
+                        </div>
+                        <div class="plan-price">
+                            <h6>$10.00 USD</h6>
+                            <span>$24.00 USD</span>
+                        </div>
+                    </div>
+                    <div class="expand hidden">
+                        <div class="item">
+                            <div></div>
+                            <div class="item-size">Size</div>
+                            <div>Color</div>
+                        </div>
+                        <div class="item">
+                            <div>#1</div>
+                            <div class="item-size">
+                                <select>
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                </select>
+                            </div>
+                            <select>
+                                <option>Black</option>
+                                <option>Blue</option>
+                                <option>Red</option>
+                            </select>
+                        </div>
+                        <div class="item">
+                            <div>#2</div>
+                            <div class="item-size">
+                                <select>
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                </select>
+                            </div>
+                            <select>
+                                <option>Black</option>
+                                <option>Blue</option>
+                                <option>Red</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="total-wrapper">
+                <span class="free-delivery">Free Delivery</span>
+                <span class="total">Total : $18.00 USD</span>
+            </div>
+            <button type="submit" class="cart-btn">+ Add to Cart</button>
+            <em class="credit"> @ Powered by Pumper</em>
+        </div>
+    </div>
+</body>
+<script>
+    const cards = document.querySelectorAll('.card-item');
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            cards.forEach(c => {
+                const input = c.querySelector('.card-input');
+                const child = c.querySelector('.expand');
+                if (c === card) {
+                    input.checked = true;
+                    child.classList.remove('hidden');
+                    child.classList.add('visible');
+                    c.classList.add('active')
+
+                } else {
+                    input.checked = false;
+                    c.classList.remove('active')
+                    child.classList.remove('visible');
+                    child.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+</script>
+
+</html>
